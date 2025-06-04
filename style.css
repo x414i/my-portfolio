@@ -398,3 +398,168 @@ a {
   }
   
   
+  .section-heading {
+    position: absolute;
+    width: 1365px;
+    top: 1072px;
+    left: 45px;
+    background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-family: "Josefin Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 55px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 49.9px;
+  }
+
+  .highlights-container {
+    position: absolute;
+    width: 1376px;
+    height: 469px;
+    top: 1218px;
+    left: 40px;
+  }
+
+  .feature-card {
+    position: absolute;
+    width: 365px;
+    height: 469px;
+    top: 0;
+    left: 48px;
+    filter: blur(2px);
+  }
+
+  .feature-icon-wrapper {
+    position: absolute;
+    width: 365px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    background-image: url(./img/rectangle-31-3.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    width: 316px;
+    height: 316px;
+    top: 42px;
+    left: 25px;
+    object-fit: cover;
+  }
+
+  .feature-description
+  {
+    position: absolute;
+    width: 297px;
+    top: 436px;
+    left: 44px;
+    font-family: "Josefin Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+
+
+.feature-card-2 {
+  position: absolute;
+  width: 276px;
+  height: 355px;
+  top: 0;
+  left: 553px;
+}
+
+.feature-card-2 .feature-image-container {
+  position: absolute;
+  width: 302px;
+  height: 303px;
+  top: 0;
+  left: 0;
+}
+
+.feature-background {
+  position: absolute;
+  width: 276px;
+  height: 303px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.feature-card-2 .feature-image-container .feature-icon {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  top: 7px;
+  left: 14px;
+  object-fit: cover;
+}
+
+.feature-card-2  .feature-description {
+  position: absolute;
+  width: 321px;
+  top: 330px;
+  left: -3px;
+  font-family: "Josefin Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.feature-card-3 {
+  position: absolute;
+  width: 365px;
+  height: 469px;
+  top: -16px;
+  left: 969px;
+  filter: blur(2px);
+}
+
+.feature-card-3 .feature-image-container {
+  position: absolute;
+  width: 387px;
+  height: 400px;
+  top: 0;
+  left: 0;
+}
+.feature-card-3 .feature-image-container .feature-background {
+  position: absolute;
+  width: 365px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.feature-card-3 .feature-image-container .feature-icon {
+  position: absolute;
+  width: 379px;
+  height: 379px;
+  top: 12px;
+  left: 8px;
+  object-fit: cover;
+}
+
+.feature-card-3 .feature-description {
+  position: absolute;
+  width: 358px;
+  top: 436px;
+  left: 18px;
+  font-family: "Josefin Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
