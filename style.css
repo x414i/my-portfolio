@@ -407,7 +407,6 @@ a {
     -webkit-background-clip: text !important;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
     font-family: "Josefin Sans-Bold", Helvetica;
     font-weight: 700;
     color: transparent;
