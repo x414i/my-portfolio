@@ -408,14 +408,16 @@ section my work
 }
 
 .highlights-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5vw;
   width: 100%;
   max-width: 1376px;
   margin: 0 auto 2rem auto;
   padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5vw;
   align-items: end;
+  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .feature-card,
@@ -432,6 +434,13 @@ section my work
   position: relative;
 }
 
+.feature-card:hover,
+.feature-card-3:hover {
+  filter: none;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+} 
+
 .feature-card-2 {
   display: flex;
   flex-direction: column;
@@ -442,7 +451,15 @@ section my work
   min-width: 220px;
   height: 355px;
   position: relative;
+  filter: blur(2px);
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  
+}
+.feature-card-2:hover {
   filter: none;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .feature-icon-wrapper,
@@ -454,16 +471,22 @@ section my work
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  border: 10px solid rgba(220, 0, 211, 1); 
+  /* border-image: linear-gradient(209deg, rgba(220, 0, 211, 1) 1%, rgba(12, 250, 245, 1) 100%) 1;  */
+  border-radius: 50px !important; 
+  box-sizing: border-box; 
+  overflow: hidden;
+
 }
 
 .feature-icon-wrapper {
-  background-image: url(./img/Rectangle\ 31.png);
+  /* background-image: url(./img/Rectangle\ 31.png); */
   background-size: cover;
   background-position: 50% 50%;
   min-height: 400px;
   max-height: 400px;
   margin-top: 42px;
-  margin-bottom: 36px;
+  margin-bottom: 10px;
 }
 
 .feature-card-2 .feature-image-container {
@@ -477,6 +500,7 @@ section my work
 }
 
 .feature-background {
+  display: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -510,15 +534,36 @@ section my work
   max-width: 358px;
   margin: 0 auto;
   font-family: "Josefin Sans-Bold", Helvetica;
-  font-weight: 700;
+  font-weight: 400;
   color: #ffffff;
-  font-size: clamp(1.2rem, 2.5vw, 32px);
+  font-size: clamp(1.2rem, 2.2vw, 24px);
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
   position: static;
-  margin-top: auto;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.feature-card-3 .feature-image-container .feature-icon:hover {
+  width: 105%;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+z-index: 25;
+}
+
+.feature-card .feature-icon-wrapper .feature-icon:hover {
+  width: 100%;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+z-index: 25;
+}
+
+.feature-card-2 .feature-image-container .feature-icon:hover {
+  width: 90%;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+z-index: 25;
 }
 
 @media (max-width: 1200px) {
@@ -533,7 +578,7 @@ section my work
     max-width: 98vw;
     min-width: 0;
     height: auto;
-    filter: none;
+    /* filter: none; */
   }
   .feature-description,
   .feature-card-2 .feature-description,
@@ -541,6 +586,78 @@ section my work
     font-size: clamp(1rem, 4vw, 28px);
   }
 }
+
+
+
+/* ========== Responsive ========== */
+/* Responsive Navigation: Hamburger Menu for Mobile */
+@media (max-width: 900px) {
+ 
+
+.feature-background {
+  display: none;
+}
+.feature-icon-wrapper, 
+.feature-card-3 .feature-image-container, 
+.feature-card-2 .feature-image-container {
+
+  width: 90%;
+padding: 0px;
+}
+.feature-card,
+.feature-card-2,
+.feature-card-3 {
+  max-width: 98vw;
+  min-width: 0;
+  height: auto;
+  filter: none;
+}
+
+}
+
+@media (max-width: 600px) {
+  .feature-background {
+    display: none;
+  }
+  .feature-icon-wrapper {
+    background-image: none;
+  }
+  .feature-icon {
+    width: 80%;
+    height: 80%;
+  
+  }
+  .feature-card,
+  .feature-card-2,
+  .feature-card-3 {
+    max-width: 98vw;
+    min-width: 0;
+    height: auto;
+    filter: none;
+  }
+
+  .feature-icon-wrapper {
+    /* background-image: url(./img/Rectangle 31.png); */
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 30%;
+    max-height: 30%;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.feature-icon{}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
