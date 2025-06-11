@@ -89,13 +89,12 @@ a {
   z-index: 1;
   pointer-events: none;
   top: 0;
-    left: 45%;
+  left: 45%;
 }
 
 .portfolio .hero-section-decoration {
-  position: absolute;
-    left: 48%;
-    top: 0;
+  left: 48%;
+  top: 0;
 }
 
 .portfolio .hero-section-pattern {
@@ -103,7 +102,7 @@ a {
   max-width: 400px;
   min-width: 180px;
   top: 10%;
-left: 65%;
+  left: 65%;
   height: auto;
 }
 
@@ -115,7 +114,7 @@ left: 65%;
   max-height: 420px;
   min-height: 200px;
   top: 15%;
-left: 65%;
+  left: 65%;
   border-radius: 50%;
   filter: blur(120px);
   background: linear-gradient(209deg, rgba(220, 0, 211, 1) 1%, rgba(12, 250, 245, 1) 100%);
@@ -146,14 +145,14 @@ left: 65%;
 
 .portfolio .main-nav {
   display: flex;
-      gap: 10rem;
-      align-items: center;
-      justify-content: space-around;
-      background: transparent;
-      margin-bottom: 2rem;
-      margin-top: 0px;
-      position: static;
-      z-index: 10;
+  gap: 10rem;
+  align-items: center;
+  justify-content: space-around;
+  background: transparent;
+  margin-bottom: 2rem;
+  margin-top: 0px;
+  position: static;
+  z-index: 10;
 }
 
 .portfolio .main-nav a {
@@ -205,7 +204,6 @@ left: 65%;
 }
 
 /* ========== Responsive ========== */
-/* Responsive Navigation: Hamburger Menu for Mobile */
 @media (max-width: 900px) {
   .portfolio .portfolio-container {
     width: 98vw;
@@ -248,13 +246,16 @@ left: 65%;
     display: flex;
     animation: fadeInMenu 0.2s;
   }
-  .portfolio .main-nav a {
+  .portfolio .main-nav a,
+  .portfolio .main-nav-item-active {
     width: 100%;
     text-align: left;
     font-size: 1.1rem;
     padding: 0.75rem 1.5rem;
     border-radius: 0;
     transition: background 0.2s, color 0.2s;
+    background: transparent;
+    color: #fff;
   }
   .portfolio .main-nav a:hover,
   .portfolio .main-nav-item-active {
@@ -318,11 +319,16 @@ left: 65%;
     border-radius: 14px;
     padding: 0.5rem 0;
   }
-  .portfolio .main-nav a {
+  .portfolio .main-nav a,
+  .portfolio .main-nav-item-active {
     font-size: 1rem;
     padding: 0.85rem 1.2rem;
     border-radius: 0;
     border-bottom: 1px solid #ffffff10;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    color: #fff;
   }
   .portfolio .main-nav a:last-child {
     border-bottom: none;
@@ -364,25 +370,6 @@ left: 65%;
   to { opacity: 1; transform: translateY(0);}
 }
 
-/* ========== Example for section-heading ========== */
-/* .section-heading {
-  width: 100%;
-  max-width: 900px;
-  margin: 2rem auto 1rem auto;
-  background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
-  -webkit-background-clip: text !important;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Josefin Sans-Bold", Helvetica;
-  font-weight: 700;
-  color: #dc00d3;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 1.1;
-} */
-
-/* ========== يمكنك تطبيق نفس المنهجية على باقي الأقسام ========== */
 
 
 /* 
