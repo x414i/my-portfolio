@@ -1647,227 +1647,230 @@ z-index: 90;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Form Styles */
+
 .contact-form-container {
-  position: absolute;
-  width: 1337px;
-  height: 861px;
-  top: 3419px;
-  left: 72px;
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  background-color: #100425;
+  overflow: hidden;
+  top: 20rem; /* ~3419px with 16px base, adjust based on page */
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  width: 100%;
+  margin: 0 auto 2rem;
+  text-align: center;
+  background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Josefin Sans-Bold", Helvetica;
+  font-weight: 700;
+  color: transparent;
+  font-size: clamp(2rem, 3.5vw, 3.5rem); /* ~55px */
+  letter-spacing: 0;
+  line-height: clamp(2.5rem, 3.1vw, 3.1rem); /* ~49.9px */
+  height: clamp(3rem, 4.375vw, 4.375rem); /* ~70px */
 }
 
 .contact-form {
-  position: absolute;
-  width: 1090px;
-  height: 726px;
-  top: 0;
-  left: 121px;
-}
-
-.contact-form .form-header {
   position: relative;
-  width: 989px;
-  height: 592px;
-  top: 100px;
- 
-  left: 71px;
+  width: clamp(60vw, 89.13vw, 1337px);
+  background: transparent;
+  border-radius: 2.33vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 2px solid #ae0ca7;
 }
 
-.nesletter {
-  position: absolute;
-  width: 989px;
-  height: 592px;
-  top: 0;
-  left: 0;
-}
-
-.header-content {
-  position: relative;
-  width: 985px;
-  height: 592px;
-  border-radius: 35px;
-}
-
-.form-instruction {
- position: absolute;
-  width: 637px;
-  top: 98px;
-  left: 164px;
-  font-family: "Josefin Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 24px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 21.8px;
-  white-space: nowrap;
-}
-
-.form-divider {
-  position: absolute;
-  width: 985px;
-  height: 592px;
-  top: 0;
-  left: 0;
-  border-radius: 35px;
-  border: none;
-  filter: blur(6.5px);
-}
-
-.form-divider::before {
-  content: "";
+.contact-form::before {
+  content: '';
   position: absolute;
   inset: 0;
-  padding: 5px;
-  border-radius: 35px;
+  padding: 0.33vw; /* ~5px */
+  border-radius: 2.33vw; /* ~35px */
   background: linear-gradient(180deg, rgba(174, 12, 167, 1) 0%, rgba(62, 145, 215, 1) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
 }
 
+.form-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 .form-title {
-  position: absolute;
-  width: 617px;
-  top: 53px;
-  left: 184px;
   font-family: "Josefin Sans-Bold", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 32px;
-  text-align: center;
+  font-size: clamp(1.5rem, 2.13vw, 2.13rem); /* ~32px */
   letter-spacing: 0;
   line-height: normal;
+  margin-bottom: 0.5rem;
+}
+
+.form-instruction {
+  font-family: "Josefin Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(1rem, 1.6vw, 1.6rem); /* ~24px */
+  letter-spacing: 0;
+  line-height: clamp(1rem, 1.45vw, 1.45rem); /* ~21.8px */
   white-space: nowrap;
 }
 
-.email-input {
-  position: absolute;
-  width: 985px;
-  height: 592px;
-  top: 0;
-  left: 0;
-  border-radius: 35px;
+.form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 80%;
+  margin-bottom: 2rem;
 }
-.input-label-name {
-  position: absolute;
-  width: 378px;
-  top: 184px;
-  left: 40px;
+
+.field-group {
+  display: contents; /* Allows grid children to be direct children of form-fields */
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0;
   font-family: "Josefin Sans-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 21.8px;
+  font-size: clamp(1rem, 1.6vw, 1.6rem); /* ~24px */
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ae0ca7;
+  outline: none;
 }
 
-.input-label-email {
-  position: absolute;
-  width: 305px;
-  top: 184px;
-  left: 571px;
+.message-field {
+  grid-column: 1 / 3; /* Span both columns */
+  width: 100%;
+  height: clamp(10vh, 14.2vw, 213px); /* ~213px */
+  padding: 0.5rem;
   font-family: "Josefin Sans-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 21.8px;
-}
-
-.message-input {
-  position: absolute;
-  width: 869px;
-  height: 213px;
-  top: 249px;
-  left: 40px;
-  border-radius: 35px;
+  font-size: clamp(1rem, 1.6vw, 1.6rem); /* ~24px */
+  background: transparent;
+  border: 2px solid #ae0ca7;
+  border-radius: 1.33vw; /* ~20px */
+  resize: none;
+  outline: none;
 }
 
 .form-actions {
-  position: absolute;
-  width: 150px;
-  height: 60px;
-  top: 499px;
-  left: 801px;
+  text-align: right; /* Align the button to the right */
 }
 
-.buttons-container {
-  position: relative;
-  height: 60px;
-  border-radius: 40px;
-}
-
-.action-button {
-  display: flex;
-  width: 150px;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px 21px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 40px;
-  filter: blur(5.5px);
-  background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
-}
-
-.button-text {
-  display: flex;
-  width: 150px;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px 21px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 40px;
-  filter: blur(5.5px);
-  background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
-}
-
-.button-text-inner {
-  position: relative;
-  width: fit-content;
+.submit-button {
+  padding: clamp(0.5rem, 1.33vw, 1.33rem) clamp(1rem, 1.4vw, 1.4rem);
   font-family: "Josefin Sans-Bold", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.submit-button  {
-  display: flex;
-  width: 150px;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px 21px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 40px;
+  font-size: clamp(1rem, 1.33vw, 1.33rem);
   background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  right: -30rem;
+  width: 15vh;
+  box-shadow: 0px 0px 10px rgba(42, 169, 223, 0.5);
 }
 
-.message-label {
-  position: absolute;
-  width: 869px;
-  top: 210px;
-  left: 40px;
-  font-family: "Josefin Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 21.8px;
+.submit-button:hover {
+  transform: scale(1.05);
 }
+
+/* Responsive Adjustments (Preserve Shape) */
+@media (max-width: 1200px) {
+  .contact-form {
+      width: clamp(70vw, 89.13vw, 1337px);
+      height: clamp(45vh, 57.4vw, 861px);
+  }
+
+  .form-fields {
+      grid-template-columns: 1fr; /* Stack fields on smaller screens */
+  }
+
+  .message-field {
+      grid-column: 1; /* Reset span */
+  }
+
+  .input-field, .message-field {
+      font-size: clamp(0.9rem, 1.4vw, 1.6rem);
+  }
+
+  .form-title {
+      font-size: clamp(1.3rem, 2vw, 2.13rem);
+  }
+
+  .form-instruction {
+      font-size: clamp(0.9rem, 1.4vw, 1.6rem);
+  }
+
+  .submit-button {
+      font-size: clamp(0.9rem, 1.2vw, 1.33rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+      width: clamp(80vw, 89.13vw, 1337px);
+      height: clamp(50vh, 57.4vw, 861px);
+  }
+
+  .form-fields {
+      grid-template-columns: 1fr;
+  }
+
+  .message-field {
+      grid-column: 1;
+  }
+
+  .input-field, .message-field {
+      font-size: clamp(0.8rem, 1.2vw, 1.6rem);
+  }
+
+  .form-title {
+      font-size: clamp(1.2rem, 1.8vw, 2.13rem);
+  }
+
+  .form-instruction {
+      font-size: clamp(0.8rem, 1.2vw, 1.6rem);
+  }
+
+  .submit-button {
+      font-size: clamp(0.8rem, 1.1vw, 1.33rem);
+      right: 0;
+  }
+}
+/* end contact section  */
