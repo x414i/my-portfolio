@@ -471,8 +471,8 @@ margin-left:  2rem;
   }
 
   .portfolio .main-nav {
-    top: -440px;
-    gap: 2rem;
+    top: -570px;
+    gap: 5rem;
     padding: 0.5rem;
 }
 }
@@ -1441,209 +1441,214 @@ z-index: 25;
 
 
 
+/*
 
+[Section Skills]
 
+*/
 
 .skills-section {
   position: relative;
   width: 100%;
-  height: 500px;
+  min-height: 50vh; /* Dynamic minimum height */
   background-color: #100425;
   overflow: hidden;
-  left: -600px;
-  top: 2800px;
+  top: 12.5rem; /* ~200px */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
 .skills-section .section-title {
-  position: absolute;
-  width: 1315px;
-  top: -1px;
-  left: 0;
-  background: linear-gradient(
-    156deg,
-    rgba(42, 169, 223, 1) 0%,
-    rgba(174, 12, 167, 1) 100%
-  );
-  -webkit-background-clip: text !important;
+  width: 100%;
+  margin: 0 auto 2rem;
+  text-align: center;
+  background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Josefin Sans-Bold", Helvetica;
   font-weight: 700;
   color: transparent;
-  font-size: 55px;
-  text-align: center;
+  font-size: clamp(2rem, 3.5vw, 3.5rem); /* ~55px */
   letter-spacing: 0;
-  line-height: 49.9px;
-  height: 70px;
+  line-height: clamp(2.5rem, 3.1vw, 3.1rem); /* ~49.9px */
+  height: clamp(3rem, 4.375vw, 4.375rem); /* ~70px */
 }
 
-.skills-header {
-  position: absolute;
-  width: 351px;
-  height: 388px;
-  left: 850px;
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
 }
 
-.skills-header-image {
-  position: absolute;
-  width: 351px;
-  height: 268px;
-  top: 120px;
-  left: 0;
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 60%;
 }
 
-.skills-header-overlay {
-  position: absolute;
-  width: 219px;
-  height: 334px;
-  top: 0;
-  left: 9px;
-  background-image: url(./img/image\ 35.svg);
-  background-size: cover;
-  background-position: 50% 50%;
+.service-card {
+  display: flex;
+  align-items: center;
+  /* background-color: #1a0a3d; */
+  padding: 1rem;
+  border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
-/* Skill Cards */
-
-
-.skill-card {
-  position: absolute;
-  width: 790px;
-  height: 90px;
-}
-
-.skill-card:nth-child(1) {
-  top: 140px;
-  left: 220px;
-}
-
-.skill-card:nth-child(2) {
-  top: 267px;
-  left: 128px;
-}
-
-.skill-card:nth-child(3) {
-  top: 384px;
-  left: 128px;
-}
-
-.skill-icon {
-  position: absolute;
-  width: 78px;
-  height: 78px;
-  top: 0;
-  left: 0;
+.service-icon {
+  width: clamp(3vw, 5.2vw, 5.2vw); /* ~78px */
+  height: clamp(3vw, 5.2vw, 5.2vw); /* ~78px */
+  margin-right: 1rem;
   object-fit: cover;
 }
 
-.skill-content {
-  position: absolute;
-  width: 697px;
-  height: 80px;
-  top: 10px;
-  left: 89px;
+.service-content {
+  flex: 1;
 }
 
-.skill-title {
-  position: absolute;
-  width: 290px;
-  top: 0;
-  left: 0;
+.service-title {
   font-family: "Josefin Sans-Bold", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 24px;
+  font-size: clamp(1rem, 1.6vw, 1.6rem); /* ~24px */
   letter-spacing: 0;
-  line-height: 21.8px;
-  left: 0px;
-  top: -26px;
+  line-height: clamp(1rem, 1.45vw, 1.45rem); /* ~21.8px */
+  margin-bottom: 0.5rem;
 }
 
-.skill-title-web {
-  position: absolute;
-  width: 290px;
-  top: 100px;
-  left: 0;
-  font-family: "Josefin Sans-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 21.8px;
-}
-
-.skill-description {
-  position: absolute;
-  width: 697px;
-  top: 40px;
-  left: 0;
+.service-description {
   font-family: "Josefin Sans-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 16px;
+  font-size: clamp(0.8rem, 1.07vw, 1.07rem); /* ~16px */
   letter-spacing: 0;
-  line-height: 14.5px;
-  
+  line-height: clamp(0.7rem, 0.97vw, 0.97rem); /* ~14.5px */
 }
 
-.desc-web {
-  top: 160px;
-  left: -5px;
-  width: 77%;
+.decoration-container {
+  width: 35%;
+  position: relative;
+  height: 100%;
+  top: 120px; 
 }
 
-.web-apps-title {
+.decoration-image {
+  width: 90%;
+  height: auto;
   position: absolute;
-  width: 328px;
-  top: 0;
-  left: 0;
-  font-family: "Josefin Sans-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 21.8px;
+  right: 0;
+  top: -2rem; /* Adjust to align with the character image */
+  object-fit: contain; /* Ensure the image fits without distortion */
 }
 
-/* Decorative Elements */
-.skill-decoration {
+.decoration-image-1 {
+  width: 50%;
+  height: auto;
   position: absolute;
-  width: 78px;
-  height: 78px;
-  object-fit: cover;
-  left: 120px;
-  top: 120px;
+  right: 8rem;
+  top: -8rem; /* Adjust to align with the character image */
+  object-fit: contain; /* Ensure the image fits without distortion */
 }
-.skill-decoration-web
-{
+
+/* Add gradient background for decoration */
+.decoration-container::before {
+  content: '';
   position: absolute;
-  width: 78px;
-  height: 78px;
-  object-fit: cover;
-  left: -90px;
-  top: 120px;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(to top, #6b2ab7, transparent);
+  z-index: -1;
+  border-radius: 10px;
 }
 
-.skill-decoration:nth-child(4) {
-  top: 265px;
-  left: 39px;
+/* Responsive Adjustments (Preserve Shape on Mobile) */
+@media (max-width: 992px) {
+  .services-container {
+    flex-direction: row; /* Maintain side-by-side layout */
+    width: 85vw;
+  }
+
+  .service-cards {
+    width: 55%;
+  }
+
+  .decoration-container {
+    width: 40%;
+  }
+
+  .service-icon {
+    width: clamp(3.5vw, 5.2vw, 5.2vw);
+    height: clamp(3.5vw, 5.2vw, 5.2vw);
+  }
+
+  .service-title {
+    font-size: clamp(0.9rem, 1.4vw, 1.6rem);
+  }
+
+  .service-description {
+    font-size: clamp(0.7rem, 1vw, 1.07rem);
+  }
 }
 
-.skill-decoration:nth-child(5) {
-  height: 77px;
-  top: 378px;
-  left: 39px;
+@media (max-width: 576px) {
+  .services-container {
+    width: 90vw;
+  }
+
+  .service-cards {
+    width: 60%;
+  }
+
+  .decoration-container {
+    width: 35%;
+  }
+
+  .service-icon {
+    width: 25%;
+        height: 55%;
+    /* width: clamp(4vw, 5.2vw, 5.2vw);
+    height: clamp(4vw, 5.2vw, 5.2vw); */
+  }
+  .skills-section .section-title {
+    font-size: 3rem;
+  }
+
+
+  .service-title {
+    font-size: clamp(1.2rem, 1.2vw, 1.6rem);
+    line-height: 1rem;
+  }
+
+  .decoration-container{
+  display: none;
 }
+
+  .service-description {
+    font-size: clamp(0.9rem, 0.9vw, 1.07rem);
+    line-height: 1rem;
+z-index: 90;
+  }
+  .service-card {
+    padding: 0.5rem;
+    width: 150%;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* 
+[End Section Skills]
+*/
+
+
+
+
 
 
 .contact-form-container {
