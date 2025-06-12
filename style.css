@@ -246,7 +246,7 @@ a {
     font-size: clamp(1rem, 3vw, 1.2rem);
   }
   .portfolio .hero-section-rectangle {
-  
+    height: 100%;
     top: 0px;
    
   
