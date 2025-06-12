@@ -4,6 +4,7 @@
   --highlight-color: #dc00d3;
   --container-width: 90vw;
   --max-container: 1440px;
+  --color: rgba(255, 255, 255, 0.1);
 }
 
 *,
@@ -1678,8 +1679,9 @@ z-index: 90;
   width: 100%;
   margin: 0 auto 2rem;
   text-align: center;
-  background: linear-gradient(156deg, rgba(42, 169, 223, 1) 0%, rgba(174, 12, 167, 1) 100%);
-  -webkit-background-clip: text;
+  background: linear-gradient(180deg, rgba(42, 169, 223, 1.5) 11%, rgba(174, 12, 167, 1.5) 87%)
+ ;
+ -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Josefin Sans-Bold", Helvetica;
@@ -1695,13 +1697,18 @@ z-index: 90;
   position: relative;
   width: clamp(60vw, 89.13vw, 1337px);
   background: transparent;
-  border-radius: 2.33vw;
+  border-radius: 102px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  border: 2px solid #ae0ca7;
+  padding: 10px;
+  border: solid  0.1em transparent;
+  border-radius: 30px;
+  background-image: linear-gradient(#100425, #100425), linear-gradient(180deg, rgba(174, 12, 167, 1) 0%, rgba(62, 145, 215, 1) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  
 }
 
 .contact-form::before {
@@ -1732,6 +1739,7 @@ z-index: 90;
   letter-spacing: 0;
   line-height: normal;
   margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .form-instruction {
@@ -1772,17 +1780,29 @@ z-index: 90;
 .message-field {
   grid-column: 1 / 3; /* Span both columns */
   width: 100%;
-  height: clamp(10vh, 14.2vw, 213px); /* ~213px */
+  height: clamp(10vh, 14.2vw, 213px);
   padding: 0.5rem;
   font-family: "Josefin Sans-Regular", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: clamp(1rem, 1.6vw, 1.6rem); /* ~24px */
+  font-size: clamp(1rem, 1.6vw, 1.6rem);
   background: transparent;
   border: 2px solid #ae0ca7;
-  border-radius: 1.33vw; /* ~20px */
+  border-radius: 1.33vw;
   resize: none;
   outline: none;
+  padding: 5px;
+  border: solid 1px transparent;
+  border-radius: 30px;
+  background-image: linear-gradient(#100425, #100425), linear-gradient(180deg, rgba(174, 12, 167, 1) 0%, rgba(62, 145, 215, 1) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.input-field::placeholder,
+.message-field::placeholder {
+  color: #ffffff;
+  opacity: 0.7; 
 }
 
 .form-actions {
@@ -1804,6 +1824,7 @@ z-index: 90;
   right: -30rem;
   width: 15vh;
   box-shadow: 0px 0px 10px rgba(42, 169, 223, 0.5);
+  margin-bottom: 0.5rem;
 }
 
 .submit-button:hover {
